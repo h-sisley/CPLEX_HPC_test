@@ -27,7 +27,7 @@ all_test: test
 test: test.o
 	$(CCC) $(CCFLAGS) $(CCLNDIRS) -o test test.o $(CCLNFLAGS) -std=c++0x -std=c++11 -g
 test.o: Source.cpp
-	$(CCC) -c $(CCFLAGS) F4_multimach.cpp -o test.o -I $(CPLEXINCDIR) -I $(CONCERTINCDIR) -std=c++0x -std=c++11 -g
+	$(CCC) -c $(CCFLAGS) Source.cpp -o test.o -I $(CPLEXINCDIR) -I $(CONCERTINCDIR) -std=c++0x -std=c++11 -g
 
 clean:
 	rm *o test
