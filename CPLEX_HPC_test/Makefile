@@ -7,8 +7,25 @@ CCC = g++ -O0
 CCOPT = -m64 -O -fPIC -fno-strict-aliasing -fexceptions -DNDEBUG -DIL_STD
 
 CPLEXBINDIR   = $(CPLEXDIR)/bin/$(BINDIST)
+CPLEXJARDIR   = $(CPLEXDIR)/lib/cplex.jar
 CPLEXLIBDIR   = $(CPLEXDIR)/lib/$(SYSTEM)/$(LIBFORMAT)
 CONCERTLIBDIR = $(CONCERTDIR)/lib/$(SYSTEM)/$(LIBFORMAT)
+
+CCLNFLAGS = -L$(CPLEXLIBDIR) -lilocplex -lcplex -L$(CONCERTLIBDIR) -lconcert -lm -lpthread 
+CLNFLAGS  = -L$(CPLEXLIBDIR) -lcplex -lm -lpthread 
+
+
+CONCERTINCDIR = $(CONCERTDIR)/include
+CPLEXINCDIR   = $(CPLEXDIR)/include
+
+EXDIR         = $(CPLEXDIR)/examples
+EXSRC         = $(EXDIR)/src
+EXINC         = $(EXDIR)/include
+EXDATA        = $(EXDIR)/data
+
+CFLAGS  = $(COPT)  -I$(CPLEXINCDIR)
+CCFLAGS = $(CCOPT) -I$(CPLEXINCDIR) -I$(CONCERTINCDIR) 
+JCFLAGS = $(JOPT)
 
 CCLNDIRS  = -L$(CPLEXLIBDIR) -L$(CONCERTLIBDIR)
 CCLNFLAGS = -lconcert -lilocplex -lcplex -lm -lpthread
