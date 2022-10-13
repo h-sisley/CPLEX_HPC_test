@@ -28,16 +28,10 @@ CCFLAGS = $(CCOPT) -I$(CPLEXINCDIR) -I$(CONCERTINCDIR)
 JCFLAGS = $(JOPT)
 
 CCLNDIRS  = -L$(CPLEXLIBDIR) -L$(CONCERTLIBDIR)
-CCLNFLAGS = -lconcert -lilocplex -lcplex -lm -lpthread
 
 
 all:
 	make all_test
-
-CONCERTINCDIR = $(CONCERTDIR)/include
-CPLEXINCDIR   = $(CPLEXDIR)/include
-
-CCFLAGS = $(CCOPT) -I$(CPLEXINCDIR) -I$(CONCERTINCDIR) 
 
 all_test: test
 
