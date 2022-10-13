@@ -38,7 +38,7 @@ all_test: test
 test: test.o
 	$(CCC) $(CCFLAGS) $(CCLNDIRS) -o test test.o $(CCLNFLAGS) -std=c++0x -std=c++11 -g
 test.o: Source.cpp
-	$(CCC) -c $(CCFLAGS) $(CCLNDIRS) Source.cpp -o test.o -I $(CPLEXINCDIR) -I $(CONCERTINCDIR) - L $(CCLNFLAGS) -std=c++0x -std=c++11 -g
+	$(CCC) -c $(CCFLAGS) $(CCLNDIRS) Source.cpp -o test.o -I $(CPLEXINCDIR) -I $(CONCERTINCDIR) -std=c++0x -std=c++11 -g
 
 clean:
 	rm *o test
