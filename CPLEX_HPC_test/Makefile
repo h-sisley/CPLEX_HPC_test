@@ -1,7 +1,7 @@
 SYSTEM     = x86-64_linux
 LIBFORMAT  = static_pic
-CPLEXDIR      = /pkg/suse12/software/cplex/12.8-foss-2019a/cplex
-CONCERTDIR    = /pkg/suse12/software/cplex/12.8-foss-2019a/concert
+CPLEXDIR      = /pkg/suse12/software/cplex/12.8-foss-2018a/cplex
+CONCERTDIR    = /pkg/suse12/software/cplex/12.8-foss-2018a/concert
 
 CCC = g++ -O0
 
